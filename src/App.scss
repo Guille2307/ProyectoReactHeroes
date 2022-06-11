@@ -1,0 +1,20 @@
+*,
+::after ::before {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #000b1d;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Orbitron:wght@400;700;900&family=Roboto:ital,wght@0,400;1,700&display=swap");

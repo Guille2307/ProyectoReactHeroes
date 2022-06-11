@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000116;
+  padding: 2rem;
+  text-align: center;
+  border: solid 2px #5757e580;
+}
+
+.footer-image {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+.footer-paragraph {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.footer-link {
+  margin-right: 0.5rem;
+  text-decoration: none;
+  color: white;
+  margin-left: 0.5rem;
+}
