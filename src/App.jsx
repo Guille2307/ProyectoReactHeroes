@@ -9,22 +9,25 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Logout from "./pages/Logout/Logout";
 import Register from "./pages/Register/Register";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/heroes" element={<Heroes />}></Route>
-        <Route path="/fields" element={<Fields />}></Route>
-        <Route path="/create-heroes" element={<CreateHeroes />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/Logout" element={<Logout />}></Route>
-      </Routes>
-      <Footer></Footer>
-    </div>
+    <Router>
+      <div>
+        <Header></Header>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/heroes" element={<Heroes />}></Route>
+          <Route path="/fields" element={<Fields />}></Route>
+          <Route path="/create-heroes" element={<CreateHeroes />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/Logout" element={<Logout />}></Route>
+        </Routes>
+        <Footer></Footer>
+      </div>
+    </Router>
   );
 }
 

@@ -26,7 +26,7 @@ const Home = () => {
       <section>
         <video
           className="video-container"
-          autoplay="true"
+          autoPlay
           poster="../../../assets/heroes-of-the-storm bg.webp"
           muted
           loop
@@ -42,7 +42,7 @@ const Home = () => {
         </p>
       </div>
       <section className="main">
-        <div class="main-role">
+        <div className="main-role">
           <img src={tank} alt="icon tank" />
           <h3>Tank</h3>
           <p>

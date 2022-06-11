@@ -5,7 +5,7 @@ import logoBz from "../../assets/Blizzard_Entertainment_Logo_2015.png";
 const Footer = () => {
   return (
     <div className="footer">
-      <div class="footer-imageContainer">
+      <div className="footer-imageContainer">
         <img
           className="footer-image"
           src={logoBz}
@@ -21,7 +21,7 @@ const Footer = () => {
       </div>
       <div className="footer-linkContainer">
         <a
-          class="footer-link"
+          className="footer-link"
           href="https://www.facebook.com/HeroesoftheStorm.es"
         >
           Facebook
