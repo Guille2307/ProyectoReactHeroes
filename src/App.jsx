@@ -10,6 +10,8 @@ import Login from "./pages/Login/Login";
 import Logout from "./pages/Logout/Logout";
 import Register from "./pages/Register/Register";
 import { BrowserRouter as Router } from "react-router-dom";
+import Detail from "./pages/Detail/Detail";
+import EditHero from "./pages/EditHero/EditHero";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="/register" element={<Register />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/Logout" element={<Logout />}></Route>
+          <Route path="/detail" element={<Detail />}></Route>
+          <Route path="/editHero" element={<EditHero />}></Route>
         </Routes>
         <Footer></Footer>
       </div>
