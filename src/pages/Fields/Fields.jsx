@@ -1,7 +1,12 @@
 import React from "react";
+import CallFields from "../../components/CallFields/CallFields";
 
 const Fields = () => {
-  return <div>Fields</div>;
+  return (
+    <div>
+      <CallFields></CallFields>
+    </div>
+  );
 };
 
 export default Fields;

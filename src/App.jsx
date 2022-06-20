@@ -13,7 +13,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Detail from "./pages/Detail/Detail";
 import EditHero from "./pages/EditHero/EditHero";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div>
@@ -26,13 +26,13 @@ function App() {
           <Route path="/register" element={<Register />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/Logout" element={<Logout />}></Route>
-          <Route path="/detail" element={<Detail />}></Route>
+          <Route path="/heroes/:id" element={<Detail />}></Route>
           <Route path="/editHero" element={<EditHero />}></Route>
         </Routes>
         <Footer></Footer>
       </div>
     </Router>
   );
-}
+};
 
 export default App;

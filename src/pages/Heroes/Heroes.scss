@@ -1,0 +1,61 @@
+.hero-title {
+  text-align: center;
+  margin: 2rem;
+  & h1 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.hero-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 2rem 2rem;
+}
+
+.hero-Filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem 0rem;
+  background-color: #1b1a99;
+  width: 100%;
+  padding: 0.8rem;
+}
+.hero-label {
+  margin-bottom: 1rem;
+}
+
+.hero-input {
+  border: none;
+  width: 300px;
+  text-align: center;
+  padding: 0.3rem;
+  color: #000116;
+  border: solid 3px #5757e5;
+  font-weight: bold;
+  font-size: 18px;
+}
+.hero-pages {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px #5757e5;
+  padding: 2rem;
+}
+.hero-pages_paragraph {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.hero-page__input {
+  width: 30px;
+  height: 30px;
+  border: solid 2px #5757e5;
+  text-align: center;
+}
