@@ -1,0 +1,31 @@
+.form-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #0c0c4f;
+  margin: 2rem;
+  padding: 5rem;
+  & p {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+.labelRegister-form {
+  margin-bottom: 1rem;
+}
+
+.inputRegister-form {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.button-register {
+  padding: 1rem;
+  width: 150px;
+  margin-top: 1rem;
+  background-color: #000116;
+  color: white;
+  border: none;
+}
+.error-formRegister {
+  color: red;
+}

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Heroes.scss";
 import UseEffectApiRequest from "../../components/Call/UseEffectApiRequest ";
-
+import { DebounceInput } from "react-debounce-input";
 const Heroes = () => {
+  let [filter, setFilter] = useState("");
+
   return (
     <div>
       <div className="hero-title">
@@ -15,9 +17,20 @@ const Heroes = () => {
 
       <div className="hero-Filter">
         <label className="hero-label">Find your hero by name</label>
-        <input className="hero-input" />
+        <DebounceInput
+          className="hero-input"
+          minLength={2}
+          debounceTimeout={1000}
+          onChange={(ev) => {
+            setFilter(ev.target.value);
+          }}
+        />
       </div>
-      <UseEffectApiRequest></UseEffectApiRequest>
+
+      <UseEffectApiRequest
+        filter={filter}
+        setFilter={setFilter}
+      ></UseEffectApiRequest>
     </div>
   );
 };

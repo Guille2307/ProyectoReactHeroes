@@ -1,19 +1,20 @@
 import React from "react";
-import "./Login.scss";
+import "./FormRegister.scss";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const FormRegister = () => {
   const navigate = useNavigate();
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm({ mode: "onChange" });
+
   const OnSubmit = async (formData) => {
     try {
       const res = await fetch(
-        "https://heroesofthestorm.herokuapp.com/users/login",
+        "https://heroesofthestorm.herokuapp.com/users/register",
         {
           method: "POST",
           headers: {
@@ -24,23 +25,20 @@ const Login = () => {
       );
 
       const resData = await res.json();
-      localStorage.setItem("token", resData.data.token);
       console.log(resData);
-      navigate("/");
-      window.location.reload(true);
+      navigate("/login");
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <div>
-      <form className="form-login" onSubmit={handleSubmit(OnSubmit)}>
-        <p>Log in here</p>
-        <label className="labelLogin-form"> Email </label>
-
+    <div className="form-registerContainer">
+      <form className="form-register" onSubmit={handleSubmit(OnSubmit)}>
+        <p>Sign up here</p>
+        <label className="labelRegister-form">Email </label>
         <input
-          className="inputLogin-form"
+          className="inputRegister-form"
           type="email"
           name="email"
           placeholder="Email"
@@ -49,9 +47,9 @@ const Login = () => {
         {errors.email && errors.email.type === "required" && (
           <p className="error-formRegister">{errors.email.message}</p>
         )}
-        <label className="labelLogin-form">Password</label>
+        <label className="labelRegister-form">Password</label>
         <input
-          className="inputLogin-form"
+          className="inputRegister-form"
           type="password"
           name="password"
           placeholder="Password"
@@ -71,10 +69,12 @@ const Login = () => {
         {errors.password && errors.password.type === "pattern" && (
           <p className="error-formRegister">{errors.password.message}</p>
         )}
-        <button className="button-register">Send</button>
+        <button disabled={!isValid} className="button-register">
+          Send
+        </button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default FormRegister;
