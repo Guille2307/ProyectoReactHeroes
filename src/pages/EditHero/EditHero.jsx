@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { JwtContext } from "../../shared/context/JwtContext";
+import "./EditHero.scss";
 
 const EditHero = () => {
   const { jwt } = useContext(JwtContext);
@@ -14,6 +15,26 @@ const EditHero = () => {
     formState: { errors },
     setValue,
   } = useForm({ mode: "onChange" });
+
+  const OnDelete = async (id) => {
+    try {
+      const res = await fetch(
+        `https://heroesofthestorm.herokuapp.com/heroes/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+          },
+        }
+      );
+      const resData = await res.json();
+      console.log(resData);
+    } catch (error) {
+      console.error(error);
+    }
+    navigate("/heroes");
+  };
 
   const OnSubmit = async (formData) => {
     try {
@@ -137,6 +158,9 @@ const EditHero = () => {
         )}
 
         <button className="button-register">Send</button>
+        <button onClick={() => OnDelete(id)} className="button-delete">
+          Delete
+        </button>
       </form>
     </div>
   );
