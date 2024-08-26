@@ -19,7 +19,7 @@ const CreateHeroes = () => {
 
   const OnSubmit = async (formData) => {
     try {
-      const res = await fetch("https://heroesofthestorm.herokuapp.com/heroes", {
+      const res = await fetch("https://heroesofthestorm-production.up.railway.app/heroes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

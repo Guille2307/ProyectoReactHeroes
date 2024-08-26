@@ -7,7 +7,7 @@ const CallFields = () => {
   let [isLoading, setIsLoading] = useState(false);
 
   const apiFieldsUrl =
-    "https://heroesofthestorm.herokuapp.com/battlefields/play/:play";
+    "https://heroesofthestorm-production.up.railway.app/battlefields/play/:play";
 
   useEffect(() => {
     setIsLoading(true);

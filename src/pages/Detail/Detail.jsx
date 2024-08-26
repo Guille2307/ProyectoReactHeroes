@@ -11,7 +11,7 @@ const Detail = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://heroesofthestorm.herokuapp.com/heroes/${id}`)
+    fetch(`https://heroesofthestorm-production.up.railway.app/heroes/${id}`)
       .then((response) => response.json())
       .then((data) => setHeroes(data))
       .finally(() => setIsLoading(false));

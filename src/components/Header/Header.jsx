@@ -10,6 +10,7 @@ import Wc from "../../assets/logo-wow-3dd2cfe06df74407.png";
 import { JwtContext } from "../../shared/context/JwtContext";
 
 const Header = () => {
+  
   const { jwt, setJwt } = useContext(JwtContext);
   let navigate = useNavigate();
   const logOut = () => {

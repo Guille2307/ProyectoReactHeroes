@@ -13,7 +13,7 @@ const Login = () => {
   const OnSubmit = async (formData) => {
     try {
       const res = await fetch(
-        "https://heroesofthestorm.herokuapp.com/users/login",
+        "https://heroesofthestorm-production.up.railway.app/users/login",
         {
           method: "POST",
           headers: {

@@ -14,7 +14,7 @@ const FormRegister = () => {
   const OnSubmit = async (formData) => {
     try {
       const res = await fetch(
-        "https://heroesofthestorm.herokuapp.com/users/register",
+        "https://heroesofthestorm-production.up.railway.app/users/register",
         {
           method: "POST",
           headers: {

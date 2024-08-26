@@ -22,7 +22,7 @@ const UseEffectApiRequest = ({ filter, setFilter }) => {
   const isEmpty = (value) => {
     return !value || value.trim().length === 0;
   };
-  const baseUrl = "https://heroesofthestorm.herokuapp.com/heroes";
+  const baseUrl = "https://heroesofthestorm-production.up.railway.app/heroes";
   useEffect(() => {
     const apiUrl = isEmpty(filter)
       ? `${baseUrl}?page=${page}&numItems=${numItems}`

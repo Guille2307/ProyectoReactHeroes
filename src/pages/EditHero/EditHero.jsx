@@ -19,7 +19,7 @@ const EditHero = () => {
   const OnDelete = async (id) => {
     try {
       const res = await fetch(
-        `https://heroesofthestorm.herokuapp.com/heroes/${id}`,
+        `https://heroesofthestorm-production.up.railway.app/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -39,7 +39,7 @@ const EditHero = () => {
   const OnSubmit = async (formData) => {
     try {
       const res = await fetch(
-        `https://heroesofthestorm.herokuapp.com/heroes/${id}`,
+        `https://heroesofthestorm-production.up.railway.app/heroes/${id}`,
         {
           method: "PUT",
           headers: {
@@ -65,7 +65,7 @@ const EditHero = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://heroesofthestorm.herokuapp.com/heroes/${id}`)
+    fetch(`https://heroesofthestorm-production.up.railway.app/heroes/${id}`)
       .then((response) => response.json())
       .then((data) => setHeroes(data))
       .finally(() => setIsLoading(false));
